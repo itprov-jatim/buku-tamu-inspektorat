@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buku Tamu Inspektorat Provinsi Jawa Timur</title>
+    <title>Peminjaman Mobil Inspektorat Provinsi Jawa Timur</title>
     <link rel="icon" href="{{ asset('img/logo-inspektorat2.png') }}" type="image/x-icon">
     <link href="{{ asset('sbadmin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css-fonts/poppins.css') }}" rel="stylesheet">
-    @vite([ 'resources/js/app.js'])
+    @vite(['resources/js/app.js'])
 
     <style>
     body {
@@ -235,8 +235,7 @@
 <body>
     <div class="container">
         <div class="content">
-            <h1>Selamat Datang</h1>
-            <h1>di Buku Tamu Inspektorat</h1>
+            <h1>Peminjaman Mobil Inspektorat</h1>
             <p>Jl. Raya Bandara Juanda No.8, Dusun Pager, Sawotratap, Kec. Gedangan, Kabupaten Sidoarjo, Jawa Timur</p>
             @if(Auth::check())
             <a href="{{ route('bukutamu.create') }}" class="btn btn-primary">Masuk</a>
@@ -248,15 +247,15 @@
             <div class="stats">
                 <div class="stat-box">
                     <h2>{{ now()->day }}</h2>
-                    <p>{{ $tamuHariIni }} ({{ $rombonganHariIni }}) Pengunjung</p>
+                    <p> () Mobil Tersedia Hari Ini </p>
                 </div>
                 <div class="stat-box">
                     <h2>{{ now()->translatedFormat('F') }}</h2>
-                    <p>{{ $tamuBulanIni }} ({{ $rombonganBulanIni }}) Pengunjung</p>
+                    <p> () Pengunjung</p>
                 </div>
                 <div class="stat-box">
                     <h2>{{ now()->year }}</h2>
-                    <p>{{ $tamuTahunIni }} ({{ $rombonganTahunIni }}) Pengunjung</p>
+                    <p> () Pengunjung</p>
                 </div>
             </div>
         </div>

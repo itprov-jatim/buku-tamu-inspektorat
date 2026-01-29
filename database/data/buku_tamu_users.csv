@@ -1,5 +1,8 @@
 id,nama_user,email,password,role_id,created_at,updated_at
-1,Super Admin 1,superadmin1@gmail.com,$2y$12$GAzCWjECxGkUf0BgWUUHgeobLhfYhPLkB8qZiACp8Ox1R2uDz0tBK,1,4/23/2025 8:18,4/23/2025 8:18
-2,Resepsionis 1,resepsionis1@gmail.com,$2y$12$GuL9c6Rp6XYYCtFcNlSbV.Rknl5yyZD3870K58g7CCTkwLcT8KmGC,2,4/23/2025 8:18,4/23/2025 8:18
-3,Monitor,monitor@gmail.com,$2y$12$anKSg8w/0iFaeseX/JOki.d2N8kP5iLFtb18BxKR/x1yvh/Kiwk6q,3,4/23/2025 8:18,4/23/2025 8:18
+1,Super Admin 1,superadmin1@gmail.com,superadmin123,1,4/23/2025 8:18,4/23/2025 8:18
+2,Resepsionis 1,resepsionis1@gmail.com,resepsionis123,2,4/23/2025 8:18,4/23/2025 8:18
+3,Monitor,monitor@gmail.com,monitor123,3,4/23/2025 8:18,4/23/2025 8:18
+4,Admin Mobil,adminmobil@gmail.com,adminmobil123,4,1/28/2026 2:29,1/28/2026 2:29
+5,Kasubag,kasubag@gmail.com,kasubag123,5,1/28/2026 2:29,1/28/2026 2:29
+6,Sekretaris,sekretaris@gmail.com,sekretaris123,6,1/28/2026 2:29,1/28/2026 2:29
 ,,,,,,

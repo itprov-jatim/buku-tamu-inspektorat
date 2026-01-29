@@ -40,4 +40,9 @@ class LandingPageController
         ));
     }
 
+    public function indexPeminjaman()
+    {
+        return view('welcome_peminjaman');
+    }
+
 }

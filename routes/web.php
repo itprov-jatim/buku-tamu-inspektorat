@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 // Membuka Landing Page
 Route::get('/', [LandingPageController::class, 'index'])->name('landing.page');
+Route::get('/peminjaman/mobil', [LandingPageController::class, 'indexPeminjaman'])->name('landing.peminjaman.mobil');
 
 // Autentikasi
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login')->middleware('guest');
