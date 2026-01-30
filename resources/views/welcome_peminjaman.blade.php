@@ -247,16 +247,16 @@
             <div class="stats">
                 <div class="stat-box">
                     <h2>{{ now()->day }}</h2>
-                    <p> () Mobil Tersedia Hari Ini </p>
+                    <p> () Mobil Tersedia  </p>
                 </div>
                 <div class="stat-box">
                     <h2>{{ now()->translatedFormat('F') }}</h2>
-                    <p> () Pengunjung</p>
+                    <p> () Driver Tersedia </p>
                 </div>
-                <div class="stat-box">
+                {{-- <div class="stat-box">
                     <h2>{{ now()->year }}</h2>
                     <p> () Pengunjung</p>
-                </div>
+                </div> --}}
             </div>
         </div>
         <img src="{{ asset('img/logo-inspektorat2.png') }}" alt="Logo Inspektorat" class="logo">
