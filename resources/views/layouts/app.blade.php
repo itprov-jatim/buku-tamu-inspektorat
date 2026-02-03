@@ -9,6 +9,8 @@
     <link href="{{ asset('sbadmin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css-fonts/nunito.css') }}" rel="stylesheet">
     <link href="{{ asset('sbadmin/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
 <body id="page-top" class="sidebar-toggled">

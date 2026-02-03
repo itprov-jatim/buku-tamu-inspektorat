@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
 
 class UsersSeeder extends Seeder
@@ -32,7 +33,7 @@ class UsersSeeder extends Seeder
                     if (empty($record['role_id']) || !is_numeric($record['role_id'])) {
                         continue;
                     }
-
+                    $record['password'] = Hash::make($record['password']);
                     // Format tanggal
                     $record['created_at'] = $this->convertDateTime($record['created_at'] ?? null);
                     $record['updated_at'] = $this->convertDateTime($record['updated_at'] ?? null);

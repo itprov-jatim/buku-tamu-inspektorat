@@ -13,10 +13,10 @@ return new class extends Migration
             $table->string('bkd_no', 30)->nullable(false);
             $table->date('bkd_tanggal_kunjungan')->nullable(false);
             $table->time('bkd_jam_kunjungan')->nullable(false);
-            $table->string('bkd_identitas', 20)->nullable(false);
+            $table->string('bkd_identitas', 20)->nullable();
             $table->string('bkd_nama', 50)->nullable(false);
             $table->char('bkd_jenis_kelamin', 1)->nullable(false);
-            $table->string('bkd_telepon', 20)->nullable(false);
+            $table->string('bkd_telepon', 20)->nullable();
             $table->string('bkd_instansi', 200)->nullable(false);
             $table->string('bkd_keperluan', 500)->nullable(false);
             $table->unsignedBigInteger('bkd_rombongan')->default(0);
