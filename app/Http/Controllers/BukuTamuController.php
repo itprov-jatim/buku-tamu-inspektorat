@@ -69,6 +69,8 @@ class BukuTamuController
             'bkd_instansi' => 'required|string|max:255',
             'bkd_nama' => 'required|string|max:255',
             'bkd_keperluan' => 'required|string',
+            'bkd_jenis_kelamin' => 'required',
+            'bkd_rombongan' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -105,7 +107,7 @@ class BukuTamuController
 
         // Jika tamu tidak menggunakan kartu akses
         $kartu_akses = null;
-        if ($request->bkd_kartu_akses_nama === 'Tidak menggunakan kartu akses') {
+        if ($request->bkd_kartu_akses_nama === 'Tidak menggunakan kartu akses' || $request->bkd_kartu_akses_nama === null) {
             $request->merge([
                 'bkd_kartu_akses_id' => 'Tidak menggunakan kartu akses',
                 'bkd_kartu_akses_nama' => 'Tidak menggunakan kartu akses',

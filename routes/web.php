@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Route;
 // Membuka Landing Page
 Route::get('/', [LandingPageController::class, 'index'])->name('landing.page');
 Route::get('/peminjaman/mobil', [LandingPageController::class, 'indexPeminjaman'])->name('landing.peminjaman.mobil');
+Route::get('/peminjaman/form', [LandingPageController::class, 'formPeminjaman'])->name('form.peminjaman.mobil');
+Route::get('/peminjaman/status', [LandingPageController::class, 'statusPeminjaman'])->name('status.peminjaman.mobil');
+Route::get('/peminjaman/user', [LandingPageController::class, 'statusUser'])->name('status.user.mobil');
+Route::get('/peminjaman/data', [LandingPageController::class, 'dataPeminjaman'])->name('data.peminjaman.mobil');
+Route::get('/peminjaman/mobil/data', [LandingPageController::class, 'dataMobil'])->name('data.mobil');
+Route::get('/peminjaman/data/user', [LandingPageController::class, 'dataUser'])->name('data.user');
 
 // Autentikasi
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login')->middleware('guest');
@@ -54,4 +60,8 @@ Route::middleware(['auth', 'role:super_admin'])->group(function () {
 Route::middleware(['auth', 'role:monitor'])->group(function () {
     Route::get('/monitor/bukutamu', [MonitorController::class, 'bukuTamu'])->name('monitor.bukutamu');
     Route::get('/monitor/lookups', [MonitorController::class, 'lookups'])->name('monitor.lookups');
+});
+
+Route::middleware(['auth', 'role:super_admin_mobil'])->group(function () {
+    Route::resource('users', UserController::class);
 });

@@ -15,15 +15,15 @@
 
 <body id="page-top" class="sidebar-toggled">
     <div id="wrapper">
-        @include('peminjaman_mobil.layouts.sidebar')
+        @include('peminjaman-mobil.layouts.sidebar')
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                @include('peminjaman_mobil.layouts.navbar')
+                @include('peminjaman-mobil.layouts.navbar')
                 <div class="container-fluid">
                     @yield('content')
                 </div>
             </div>
-            @include('peminjaman_mobil.layouts.footer')
+            @include('peminjaman-mobil.layouts.admin-footer')
         </div>
     </div>
 
