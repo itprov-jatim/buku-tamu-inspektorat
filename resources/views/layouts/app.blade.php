@@ -15,15 +15,15 @@
 
 <body id="page-top" class="sidebar-toggled">
     <div id="wrapper">
-        @include('peminjaman_mobil.layouts.sidebar')
+        @include('layouts.sidebar')
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                @include('peminjaman_mobil.layouts.navbar')
+                @include('layouts.navbar')
                 <div class="container-fluid">
                     @yield('content')
                 </div>
             </div>
-            @include('peminjaman_mobil.layouts.footer')
+            @include('layouts.footer')
         </div>
     </div>
 
@@ -46,6 +46,7 @@
     <link href="{{ asset('sbadmin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
     <script src="{{ asset('sbadmin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('sbadmin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+
 </body>
 
 @stack('scripts')

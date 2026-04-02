@@ -99,10 +99,6 @@ class LandingPageController
         return view('peminjaman-mobil.data-pinjam.data-peminjaman');
     }
 
-      public function dataMobil()
-    {
-        return view('peminjaman-mobil.data-pinjam.data-mobil');
-    }
 
       public function dataUser()
     {

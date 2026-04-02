@@ -18,7 +18,7 @@
     </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="{{ route('data.mobil') }}">
+        <a class="nav-link" href="{{ route('mobil.index') }}">
             <i class="fas fa-car"></i>
             <span>Data Mobil</span>
         </a>
@@ -27,7 +27,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="{{ route('data.user') }}">
             <i class="fas fa-list-alt"></i>
-            <span>Data Peminjam</span>
+            <span>Report Peminjaman</span>
         </a>
     </li>
 

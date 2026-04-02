@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('mobil_datas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string( 'nama_mobil');
+            $table->string('no_polisi');
+            $table->string('km')->nullable();
+            $table->string('bbm')->nullable();
+            $table->string('peminjam_terakhir')->nullable();
+            $table->string('status')->nullable();
+        });
     }
 
     /**
@@ -19,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('data_mobil');
     }
 };

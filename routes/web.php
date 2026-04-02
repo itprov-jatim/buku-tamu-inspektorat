@@ -3,22 +3,30 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BukuTamuController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\MobilController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LookupsController;
 use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\UserDataController;
 use Illuminate\Support\Facades\Route;
 
 // Membuka Landing Page
 Route::get('/', [LandingPageController::class, 'index'])->name('landing.page');
-Route::get('/peminjaman/mobil', [LandingPageController::class, 'indexPeminjaman'])->name('landing.peminjaman.mobil');
+Route::get('/peminjaman', [LandingPageController::class, 'indexPeminjaman'])->name('landing.peminjaman.mobil');
 Route::get('/peminjaman/form', [LandingPageController::class, 'formPeminjaman'])->name('form.peminjaman.mobil');
 Route::get('/peminjaman/status', [LandingPageController::class, 'statusPeminjaman'])->name('status.peminjaman.mobil');
 Route::get('/peminjaman/user', [LandingPageController::class, 'statusUser'])->name('status.user.mobil');
 Route::get('/peminjaman/data', [LandingPageController::class, 'dataPeminjaman'])->name('data.peminjaman.mobil');
-Route::get('/peminjaman/mobil/data', [LandingPageController::class, 'dataMobil'])->name('data.mobil');
 Route::get('/peminjaman/data/user', [LandingPageController::class, 'dataUser'])->name('data.user');
 
+
+
+
+Route::prefix('peminjaman/data')->group(function () {
+    Route::resource('mobil', MobilController::class);
+    Route::resource('user', UserDataController::class);
+});
 // Autentikasi
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'login'])->name('login.process');
