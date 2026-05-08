@@ -23,10 +23,13 @@ Route::get('/peminjaman/data/user', [LandingPageController::class, 'dataUser'])-
 
 
 
+
 Route::prefix('peminjaman/data')->group(function () {
     Route::resource('mobil', MobilController::class);
     Route::resource('user', UserDataController::class);
 });
+
+
 // Autentikasi
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'login'])->name('login.process');

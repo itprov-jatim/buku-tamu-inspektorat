@@ -16,8 +16,7 @@
 <body>
 
       @yield('content')
-
-
+      
   @include('peminjaman-mobil.layouts.footer')
 </body>
 

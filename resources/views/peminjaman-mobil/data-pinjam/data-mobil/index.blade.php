@@ -12,10 +12,11 @@
 
     <div class="container-fluid">
         <h2 class="mb-4">Daftar Data Mobil</h2>
-        <a onclick="showAlert()" class="btn btn-primary mb-3">
+        <a href="{{ route('mobil.create') }}" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary mb-3">
             <i class="fas fa-plus"></i> Tambah Mobil
         </a>
-        <!-- Form filter berdasarkan rentang tanggal -->
+        
+
         <div class="card shadow mb-4">
             <div class="card-body">
                 <div class="table-responsive">
@@ -43,16 +44,23 @@
 
     <!-- DataTables Script -->
     @push('scripts')
-        <script>
-            function showAlert() {
 
-                Swal.fire({
-                    title: 'Error!',
-                    text: 'Do you want to continue',
-                    icon: 'error',
-                    confirmButtonText: 'Cool'
-                })
-            }
+
+        <script>
+            // const myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            // myModal.show();
+        </script>
+
+        <script>
+            // function showAlert() {
+
+            //     Swal.fire({
+            //         title: 'Error!',
+            //         text: 'Do you want to continue',
+            //         icon: 'error',
+            //         confirmButtonText: 'Cool'
+            //     })
+            // }
 
             // $(document).ready(function() {
             //     $('#bukuTamuTable').DataTable({

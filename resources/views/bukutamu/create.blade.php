@@ -193,12 +193,13 @@
                 <div class="flex-row-form">
                     <div class="form-group">
                         <label class="form-label" for="bkd_rombongan">Jumlah Rombongan</label>
-                        <input type="number" id="bkd_rombongan" name="bkd_rombongan" class="form-control" value="0" min="1" required value="'{{ old('bkd_rombongan') }}">
+                        <input type="number" id="bkd_rombongan" name="bkd_rombongan" class="form-control" value="0" min="1"
+                            required value="'{{ old('bkd_rombongan') }}">
                     </div>
 
                     <div class="form-group">
                         <label class="form-label" for="kartuakses-search">Nama Kartu Akses</label>
-                        <input type="text" id="kartuakses-search" name="bkd_kartu_akses_nama"  class="form-control"
+                        <input type="text" id="kartuakses-search" name="bkd_kartu_akses_nama" class="form-control"
                             placeholder="Cari Kartu Akses..." value="{{ old('bkd_kartu_akses_nama') }}">
                     </div>
                 </div>
@@ -225,6 +226,8 @@
     </div>
 
     @push('scripts')
+
+
         <script>
             $(document).ready(function () {
                 // Pencarian Instansi

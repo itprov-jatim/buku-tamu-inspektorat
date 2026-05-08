@@ -35,7 +35,7 @@ class MobilController
      */
     public function show(string $id)
     {
-        //
+        return view('peminjaman-mobil.data-pinjam.data-mobil.show');
     }
 
     /**
